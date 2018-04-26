@@ -99,6 +99,9 @@ export default {
         }
       }
       else {
+        if (this.action === 3) {
+          this.$root.Bus.$emit('reset')
+        }
         this.$root.Bus.$emit('movereset')
       }
       this.action = 0
